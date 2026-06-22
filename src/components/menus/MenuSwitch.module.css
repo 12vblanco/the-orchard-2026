@@ -1,0 +1,66 @@
+.menuSelection,
+.menuSubSelection {
+  display: flex;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  gap: 40px;
+}
+.menuLegend {
+  display: flex;
+  gap: 40px;
+}
+.dietary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: var(--text-ssm);
+}
+.dietary img {
+  width: 22px;
+  height: 24px;
+}
+
+.menuTopSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px var(--color-gold) solid;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.activeSubTab {
+  display: flex;
+  gap: 2.6rem;
+  font-size: var(--text-base);
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+}
+.subTab {
+  display: flex;
+  gap: 2.6rem;
+  font-size: var(--text-base);
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+  color: var(--color-dark-46);
+}
+
+.tab {
+  display: flex;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  gap: 40px;
+  padding-bottom: 1rem;
+  color: var(--color-dark-46);
+}
+
+.activeTab {
+  display: flex;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  gap: 40px;
+  padding-bottom: 0.2rem;
+  border-bottom: 4px var(--color-dark) solid;
+}

@@ -1,0 +1,54 @@
+.artSection {
+  width: 100%;
+  background: var(--color-light);
+  border-top: 1px solid var(--color-gold);
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.media {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.body {
+  flex: 1;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.heading {
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  color: var(--color-dark);
+  font-size: var(--text-sm);
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .inner {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,13 @@
+.dietIcons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}

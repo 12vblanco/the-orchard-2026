@@ -1,0 +1,19 @@
+.menuContent .allergies {
+  color: var(--color-red);
+  margin-bottom: 0.4rem;
+}
+.menuContent h3 {
+  margin-top: 1rem;
+}
+.menuContent h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  margin-bottom: 0.2rem;
+  /* max-width: 680px; */
+  margin: 0 auto;
+}
+.menuContent p {
+  font-size: var(--text-sm);
+  margin-bottom: 1.4rem !important;
+  margin: 0 auto;
+}

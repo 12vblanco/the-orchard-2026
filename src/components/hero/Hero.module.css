@@ -1,0 +1,88 @@
+.heroSection {
+  position: relative;
+}
+
+.heroBG {
+  width: 100%;
+  height: calc(100vh - 95px);
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 95px);
+  background: var(--color-dark);
+  opacity: 0.64;
+  pointer-events: none;
+}
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 766px;
+  height: 208px;
+}
+
+.heroHeading {
+  margin-bottom: 1rem;
+}
+
+.heroSubheading {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-light);
+  margin: 32px 12px;
+  border: 2px solid currentColor;
+  width: 188px;
+  height: 42px;
+}
+
+.buttonPrimary {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+.buttonSecondary {
+  border: 2px solid var(--color-light);
+  color: var(--color-light);
+}
+
+/* ----- Policy line ----- */
+.heroPolicy {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--color-light);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.heroPolicySpan {
+  color: var(--color-gold);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

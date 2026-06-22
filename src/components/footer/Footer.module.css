@@ -1,0 +1,124 @@
+.footer {
+  width: 100%;
+  background: var(--color-dark);
+  color: var(--color-light);
+  border-top: 1px solid var(--color-gold);
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* ----- Brand column ----- */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+}
+
+.contact {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--color-light);
+}
+
+.contactLink {
+  color: var(--color-light);
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  display: flex;
+  color: var(--color-gold);
+  transition: opacity var(--transition-fast);
+}
+
+.socialLink:hover {
+  opacity: 0.75;
+}
+
+.socialLink svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* ----- Text columns ----- */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  color: var(--color-light);
+  font-family: var(--font-display);
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.navLink {
+  color: var(--color-light);
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-gold);
+}
+
+.navLinkActive {
+  color: var(--color-gold);
+}
+
+.hoursRow {
+  color: var(--color-light);
+  font-size: var(--text-sm);
+}
+
+/* ----- Bottom bar ----- */
+.bottomBar {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--color-gold-34);
+  text-align: center;
+}
+
+.colophon {
+  color: var(--color-light);
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+}
+
+.author {
+  color: var(--color-gold);
+}
+
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
