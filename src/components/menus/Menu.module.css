@@ -136,3 +136,57 @@ p {
   flex-direction: column;
   width: 30%;
 }
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+  .menuSection {
+    /* padding: 3rem 2rem; */
+  }
+  .menuFrame {
+    /* padding: 2.5rem 2rem; */
+  }
+}
+
+@media (max-width: 768px) {
+  .menuSection {
+    padding: 3rem 0rem;
+  }
+  .menuFrame {
+    padding: 2rem 2.25rem;
+    text-align: center;
+    margin: 0.8rem;
+    overflow: hidden;
+  }
+  .menuBottomRow {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .menuColumn1 {
+    width: 96%;
+    padding: 0;
+  }
+  .menuColumn2 {
+    /* width: 100%;
+    margin-top: 2.5rem; */
+    display: none;
+  }
+  .corner {
+    width: 30px;
+  }
+  .menuFrame::after {
+    display: none;
+  }
+  .borderTall {
+    inset: 40px 24px;
+  }
+}
+
+/* Remove featured cards + decorative corners on mobile */
+@media (max-width: 600px) {
+  .menuColumn2 {
+    display: none;
+  }
+  .corner {
+    display: none;
+  }
+}

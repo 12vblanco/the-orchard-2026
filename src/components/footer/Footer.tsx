@@ -22,7 +22,7 @@ const socialIcons: Record<SocialPlatform, string> = {
 };
 
 // Split the nav into two columns under one heading: Home–Art, then the rest.
-const navColumns = [footerNav.slice(0, 4), footerNav.slice(4)];
+const navColumns = [footerNav.slice(0, 3), footerNav.slice(3)];
 
 function Footer() {
   const currentYear = new Date().getFullYear();

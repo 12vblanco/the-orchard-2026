@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { PromoConfig } from "../../data/promos";
 import styles from "./EventPromo.module.css";
 
@@ -7,14 +7,15 @@ interface EventPromoProps {
 }
 
 function EventPromo({ config: { image, alt, banners } }: EventPromoProps) {
-  const [isBannerExpanded, setIsBannerExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const isOpen = isBannerExpanded || isHovered;
-
-  const handleBannerClick = () => {
-    setIsBannerExpanded((prev) => !prev);
-  };
+  // Lock background scroll while the image overlay is open.
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const now = new Date();
   const activeBanner = banners.find((b) => {
@@ -23,21 +24,47 @@ function EventPromo({ config: { image, alt, banners } }: EventPromoProps) {
     return !notYetStarted && !alreadyEnded;
   });
 
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
   return (
     <>
       {activeBanner && (
-        <div className={styles.banner} onClick={handleBannerClick}>
+        <button type="button" className={styles.banner} onClick={open}>
           {activeBanner.text}
-        </div>
+        </button>
       )}
-      <div
-        className={`${styles.promo} ${isOpen ? styles.expanded : ""}`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+
+      <button
+        type="button"
+        className={styles.promo}
+        onClick={open}
+        aria-label="View event details"
       >
         <img src={image} alt={alt} />
-      </div>
+      </button>
+
+      {isOpen && (
+        <div
+          className={styles.modal}
+          role="dialog"
+          aria-modal="true"
+          onClick={close}
+        >
+          <button
+            type="button"
+            className={styles.close}
+            onClick={close}
+            aria-label="Close"
+          >
+            <span className={styles.closeLine} />
+            <span className={styles.closeLine} />
+          </button>
+          <img className={styles.modalImg} src={image} alt={alt} />
+        </div>
+      )}
     </>
   );
 }
+
 export default EventPromo;

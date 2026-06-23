@@ -318,3 +318,46 @@ img {
     padding-inline: var(--container-padding-lg);
   }
 }
+
+/* ------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   Tablet landscape ≤1024px · Tablet portrait ≤768px · Mobile ≤600px
+   Headings/sizes read from these tokens, so scaling them here
+   fluidly resizes type across every section.
+   ------------------------------------------------------------ */
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  :root {
+    --text-3xl: 54px;
+    --text-2xl: 42px;
+    --text-xl: 33px;
+    --lh-h1: 1.1;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  :root {
+    --text-3xl: 44px;
+    --text-2xl: 35px;
+    --text-xl: 29px;
+    --text-md: 22px;
+    --text-nav: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  :root {
+    --text-3xl: 34px;
+    --text-2xl: 28px;
+    --text-xl: 24px;
+    --text-lg: 26px;
+    --text-md: 20px;
+  }
+
+  h1 {
+    line-height: 1.15;
+  }
+}

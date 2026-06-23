@@ -9,8 +9,11 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 4rem 2rem 2.5rem;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
   gap: 3rem;
 }
 
@@ -18,6 +21,8 @@
 .brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1.25rem;
 }
 
@@ -30,6 +35,7 @@
   font-style: normal;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.4rem;
   color: var(--color-light);
 }
@@ -49,6 +55,8 @@
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.6rem;
   margin-top: 0.25rem;
 }
@@ -69,18 +77,12 @@
 }
 
 /* ----- Text columns ----- */
-.column {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  max-width: fit-content;
-}
-/* ----- Text columns ----- */
+.column,
 .column2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  max-width: fit-content;
 }
 
 .columnTitle {
@@ -91,12 +93,15 @@
 
 .navColumns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.3rem;
 }
 
@@ -140,7 +145,8 @@
 
 @media (max-width: 860px) {
   .inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     gap: 2.5rem;
   }
 }

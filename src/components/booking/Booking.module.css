@@ -162,7 +162,7 @@
 /* ----- Responsive ----- */
 @media (max-width: 768px) {
   .inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
   }

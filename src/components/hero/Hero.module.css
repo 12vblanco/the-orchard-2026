@@ -88,3 +88,68 @@
     opacity: 1;
   }
 }
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+  .heroHeading {
+    font-size: 52px;
+    text-align: center;
+  }
+  .heroContent {
+    /* width: 90%; */
+    max-width: 766px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonRow {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    margin: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroBG,
+  .overlay {
+    height: calc(100vh - 95px);
+  }
+
+  .heroContent {
+    width: 92%;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .heroPolicy {
+    bottom: 1rem;
+    left: 1rem;
+    right: 25%;
+    font-size: var(--text-ssm);
+  }
+}
+@media (max-width: 400px) {
+  .heroHeading {
+    font-size: 42px;
+    text-align: center;
+  }
+  .heroSubHeading p {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  .heroContent {
+    /* width: 90%; */
+    max-width: 98%;
+    /* height: auto; */
+  }
+}

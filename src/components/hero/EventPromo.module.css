@@ -4,14 +4,15 @@
   right: 2rem;
   width: 160px;
   height: 160px;
+  padding: 0;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  transform-origin: bottom right;
+  border-radius: 50%;
+  z-index: 2;
+  transition: transform var(--transition-base);
 }
 
-.promo.expanded {
-  transform: scale(2);
-  min-height: 200px;
+.promo:hover {
+  transform: scale(1.08);
 }
 
 .promo img {
@@ -19,21 +20,104 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  transition: border-radius 0.3s ease-in-out;
-}
-
-.promo.expanded img {
-  border-radius: 24px;
 }
 
 .banner {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
   background: var(--color-dark-46);
   font-size: var(--text-sm);
-  width: 100%;
   color: var(--color-light);
   text-align: center;
   padding: 0.3rem;
   cursor: pointer;
+  z-index: 2;
+}
+
+/* ----- Full-screen image overlay (on top of everything) ----- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-dark-70);
+  cursor: zoom-out;
+  animation: promoFadeIn var(--transition-base) ease;
+}
+
+.modalImg {
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-dark-46);
+  transition: background var(--transition-fast);
+}
+
+.close:hover {
+  background: var(--color-dark-70);
+}
+
+.closeLine {
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-light);
+}
+
+.closeLine:first-child {
+  transform: rotate(45deg);
+}
+
+.closeLine:last-child {
+  transform: rotate(-45deg);
+}
+
+@keyframes promoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smaller floating thumbnail on phones */
+@media (max-width: 600px) {
+  .promo {
+    width: 104px;
+    height: 104px;
+    bottom: 3rem;
+    right: 1rem;
+  }
+  @media (max-width: 400px) {
+    .banner {
+      font-size: 15px;
+      height: 64px;
+      padding: 4px;
+    }
+    .button {
+    }
+  }
 }

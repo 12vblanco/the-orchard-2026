@@ -6,7 +6,7 @@ export type FooterNavItem = {
 };
 
 export const footerNav: FooterNavItem[] = [
-  { label: "Home", path: "/" },
+  // { label: "Home", path: "/" },
   { label: "Menus", path: "/#menu" },
   { label: "Contact", path: "/#contact" },
   { label: "Art", path: "/#art" },
