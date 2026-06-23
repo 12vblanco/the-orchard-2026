@@ -108,6 +108,11 @@
 }
 
 /* Smaller floating thumbnail on phones */
+@media (max-width: 890px) {
+  .promo {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .promo {
     width: 104px;
