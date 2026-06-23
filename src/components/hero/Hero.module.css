@@ -57,6 +57,8 @@
 
 .buttonPrimary {
   background: var(--color-light);
+  border: 2px solid var(--color-light);
+
   color: var(--color-dark);
 }
 
