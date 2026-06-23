@@ -1,0 +1,5 @@
+# public/_headers
+/src/**/*.tsx
+  Content-Type: text/javascript
+/src/**/*.ts
+  Content-Type: text/javascript
