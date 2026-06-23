@@ -22,15 +22,15 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-.menuFrame {
+/* .menuFrame {
   position: relative;
-  /* middle rule — gold */
+ 
   border: 1px solid var(--color-gold);
   height: 100%;
   width: 100%;
   padding: 3rem 3.6rem;
 }
-/* dark rule — shifted down & left (sits wider on the left/bottom) */
+
 .menuFrame::before {
   content: "";
   position: absolute;
@@ -39,7 +39,7 @@ p {
   transform: translate(-10px, 10px);
   pointer-events: none;
 }
-/* dark rule — shifted up & right (sits higher on the top/right) */
+
 .menuFrame::after {
   content: "";
   position: absolute;
@@ -47,8 +47,42 @@ p {
   border: 1px solid var(--color-dark);
   transform: translate(10px, -10px);
   pointer-events: none;
+} */
+.menuFrame {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 3.6rem;
 }
 
+/* Border 1: Gold - normal size */
+.menuFrame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-gold);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Border 2: Black - wider (extends horizontally) */
+.menuFrame::after {
+  content: "";
+  position: absolute;
+  inset: -15px 15px -15px 15px; /* wider: left/right extend more */
+  border: 1px solid var(--color-dark);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Border 3: Black - taller (extends vertically) */
+.borderTall {
+  position: absolute;
+  inset: 80px 48px 80px 48px; /* taller: extends top/bottom */
+  border: 1px solid var(--color-dark);
+  pointer-events: none;
+  z-index: 0;
+}
 /* corner sprigs, centred on the outer corners of the frame */
 .corner {
   position: absolute;
@@ -58,22 +92,22 @@ p {
   pointer-events: none;
 }
 .cornerTL {
-  top: -36px;
-  left: -36px;
+  top: -30px;
+  left: -32px;
 }
 .cornerTR {
-  top: -36px;
-  right: -36px;
+  top: -30px;
+  right: -32px;
   transform: rotate(90deg);
 }
 .cornerBR {
-  bottom: -36px;
-  right: -36px;
+  bottom: -30px;
+  right: -32px;
   transform: rotate(180deg);
 }
 .cornerBL {
-  bottom: -36px;
-  left: -36px;
+  bottom: -30px;
+  left: -32px;
   transform: rotate(270deg);
 }
 .menuSubheading {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { menus, type MenuType } from "../../data/menu";
 import cornerIcon from "../../assets/menu-corner.png";
+import { menus, type MenuType } from "../../data/menu";
 import FeaturedCards from "./FeaturedCards";
 import styles from "./Menu.module.css";
 import MenuContent from "./MenuContent";
@@ -42,6 +42,7 @@ function Menu() {
 
   return (
     <section id="menu" className={styles.menuSection}>
+      <div className={styles.borderTall} />
       <div className={styles.menuFrame}>
         <img
           src={cornerIcon}

@@ -95,13 +95,13 @@
 .widgetWrapper {
   position: relative;
   width: 280px;
-  height: 362px;
+  height: 304px;
   flex: 0 0 auto;
 }
 
 .iframe {
   width: 280px;
-  height: 362px;
+  height: 304px;
   border: none;
   display: block;
   color: var(--color-light);
