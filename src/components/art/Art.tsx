@@ -1,14 +1,20 @@
+import artImg from "../../assets/new9.jpg";
 import { artContent } from "../../data/art";
 import styles from "./Art.module.css";
 
 function Art() {
-  const { image, imageAlt, heading, paragraphs, contact } = artContent;
+  const { heading, paragraphs, contact } = artContent;
 
   return (
     <section id="art" className={styles.artSection}>
       <div className={styles.inner}>
         <div className={styles.media}>
-          <img className={styles.image} src={image} alt={imageAlt} />
+          <div className={styles.overlay} aria-hidden="true" />
+          <img
+            className={styles.image}
+            src={artImg}
+            alt="Image of the back room with art"
+          />
         </div>
 
         <div className={styles.body}>
@@ -22,7 +28,15 @@ function Art() {
 
           <p className={styles.paragraph}>
             {contact.before}
-            <a className={styles.link} href={`mailto:${contact.email}`}>
+            <a
+              className={styles.link}
+              href={`mailto:${contact.email}`}
+              onClick={(e) => {
+                e.currentTarget.href = e.currentTarget.href
+                  .replace("AhT", "@")
+                  .replace("DhOT", ".");
+              }}
+            >
               {contact.linkText}
             </a>
             {contact.after}

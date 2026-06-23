@@ -12,8 +12,17 @@
   align-items: center;
   gap: 4rem;
 }
-
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-dark);
+  opacity: 0.34;
+  border-radius: 20px;
+  z-index: 1;
+  pointer-events: none;
+}
 .media {
+  position: relative;
   flex: 1;
 }
 

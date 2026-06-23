@@ -27,9 +27,12 @@ export const artContent: ArtContent = {
     "In our side room, we hold regular art exhibitions across the year supporting local artists and art students to showcase their work. Since we are close to the Botanical Gardens in Edinburgh, we encourage natural art, Edinburgh city-scapes, & photography.",
   ],
   contact: {
-    before: "If you would like to hold an exhibition at The Orchard, please email Lorraine ",
-    linkText: "here",
-    email: "theorchardbar@gmail.com",
+    before:
+      "If you would like to hold an exhibition at The Orchard, please email ",
+    linkText: "Lorraine here",
+    // Obfuscated to deter email scrapers — decoded on click in Art.tsx.
+    // "AhT" -> "@", "DhOT" -> "."
+    email: "theorchardbarAhTgmailDhOTcom",
     after: " with your details.",
   },
 };

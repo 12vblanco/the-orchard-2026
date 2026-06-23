@@ -1,5 +1,9 @@
 // Content for the site footer.
-export type FooterNavItem = { label: string; path: string; highlight?: boolean };
+export type FooterNavItem = {
+  label: string;
+  path: string;
+  highlight?: boolean;
+};
 
 export const footerNav: FooterNavItem[] = [
   { label: "Home", path: "/" },
@@ -11,20 +15,19 @@ export const footerNav: FooterNavItem[] = [
   { label: "Terms", path: "/terms", highlight: true },
 ];
 
-export type OpeningHour = { day: string; hours: string };
+// Same hours every day, so a single line covers it.
+export const openingHours = "Everyday 12:00 to 23:00";
 
-export const openingHours: OpeningHour[] = [
-  { day: "Monday", hours: "12:00 - 23:00" },
-  { day: "Tuesday", hours: "12:00 - 23:00" },
-  { day: "Wednesday", hours: "12:00 - 23:00" },
-  { day: "Thursday", hours: "12:00 - 23:00" },
-  { day: "Friday", hours: "12:00 - 23:00" },
-  { day: "Saturday", hours: "12:00 - 23:00" },
-  { day: "Sunday", hours: "12:00 - 23:00" },
-];
-
-export type SocialPlatform = "facebook" | "twitter" | "instagram" | "tripadvisor";
-export type SocialLink = { platform: SocialPlatform; label: string; href: string };
+export type SocialPlatform =
+  | "facebook"
+  | "twitter"
+  | "instagram"
+  | "tripadvisor";
+export type SocialLink = {
+  platform: SocialPlatform;
+  label: string;
+  href: string;
+};
 
 // PLACEHOLDER hrefs — swap "#" for the real profile URLs.
 export const socialLinks: SocialLink[] = [
@@ -37,13 +40,12 @@ export const socialLinks: SocialLink[] = [
 export type FooterMeta = {
   author: string;
   authorUrl: string;
-  year: number;
   businessName: string;
 };
 
+// The copyright year is computed dynamically in Footer.tsx.
 export const footerMeta: FooterMeta = {
   author: "Victor Blanco",
-  authorUrl: "#",
-  year: 2026,
+  authorUrl: "https://victorblancoweb.com/",
   businessName: "The Orchard Bar",
 };

@@ -84,6 +84,13 @@
   color: var(--color-gold);
 }
 
+.emailImg {
+  display: inline-block;
+  height: 1.1em;
+  width: auto;
+  vertical-align: middle;
+}
+
 /* ----- Widget wrapper + iframe (TableSense — 280 × 362) ----- */
 .widgetWrapper {
   position: relative;

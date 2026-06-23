@@ -1,9 +1,9 @@
 import { useState } from "react";
-// PLACEHOLDER BACKGROUND: reusing the hero photo until a dedicated bar-interior
-// shot is supplied. Swap this import for the real image when ready.
-import bookingBG from "../../assets/heroBG.jpg";
+
+import emailImg from "../../assets/decor-3f9.png";
+import bookingBG from "../../assets/home0.jpg";
 import { bookingEmbed } from "../../data/booking";
-import { emailHref, phoneHref, venue } from "../../data/venue";
+import { decodeEmail, emailHref, phoneHref, venue } from "../../data/venue";
 import styles from "./Booking.module.css";
 
 function Booking() {
@@ -41,9 +41,19 @@ function Booking() {
             Phone: <a href={phoneHref}>{venue.phone}</a>
           </p>
           <p className={styles.contactLine}>
-            Email:{" "}
-            <a className={styles.email} href={emailHref}>
-              {venue.email}
+            {" "}
+            <a
+              className={styles.email}
+              href={emailHref}
+              onClick={(e) => {
+                e.currentTarget.href = decodeEmail(e.currentTarget.href);
+              }}
+            >
+              <img
+                className={styles.emailImg}
+                src={emailImg}
+                alt="Email The Orchard Bar"
+              />
             </a>
           </p>
         </div>
