@@ -2,6 +2,7 @@ import promoImg from "../assets/cover-img.webp";
 
 export type BannerMessage = {
   text: string;
+  text2: string;
   endDate: string;
   startDate?: string;
 };
@@ -16,7 +17,8 @@ export const worldCup2026: PromoConfig = {
   alt: "World cup 2026 promo image",
   banners: [
     {
-      text: "World Cup 2026 - Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Vs. Brazil 🇧🇷 24th June - Click here for more info!",
+      text: "World Cup 2026 - Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Vs. Brazil 🇧🇷 24th June - ",
+      text2: "Click here for more info!",
       endDate: "2026-06-24T23:59:59",
     },
   ],

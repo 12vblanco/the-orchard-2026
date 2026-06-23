@@ -31,7 +31,8 @@ function EventPromo({ config: { image, alt, banners } }: EventPromoProps) {
     <>
       {activeBanner && (
         <button type="button" className={styles.banner} onClick={open}>
-          {activeBanner.text}
+          {activeBanner.text}{" "}
+          <span className={styles.text2}>{activeBanner.text2}</span>
         </button>
       )}
 
