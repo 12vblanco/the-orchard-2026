@@ -2,11 +2,11 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  width: 160px;
-  height: 160px;
+  width: 190px;
+  height: auto;
   padding: 0;
   cursor: pointer;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   z-index: 2;
   transition: transform var(--transition-base);
 }
@@ -18,7 +18,7 @@
 .promo img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   object-fit: cover;
 }
 
