@@ -266,6 +266,30 @@ small,
   padding-block: var(--space-3xl);
 }
 
+/* Keep images from being dragged */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* text from being selected */
+h1,
+h2,
+h3,
+p,
+a,
+button,
+nav,
+.hero-text,
+img {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* ------------------------------------------------------------
    FOCUS & ACCESSIBILITY
    ------------------------------------------------------------ */
