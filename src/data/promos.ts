@@ -14,12 +14,12 @@ export type PromoConfig = {
 
 export const worldCup2026: PromoConfig = {
   image: promoImg,
-  alt: "World cup 2026 promo image",
+  alt: "Quiz night promo image",
   banners: [
     {
-      text: "World Cup 2026 - Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Vs. Brazil 🇧🇷 24th June - ",
+      text: "Friday Night Quiz!! - Every Fortnight from June 26th",
       text2: "Click here for more info!",
-      endDate: "2026-06-24T23:59:59",
+      endDate: "2026-08-21T23:59:59",
     },
   ],
 };

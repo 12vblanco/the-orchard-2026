@@ -24,17 +24,18 @@ function EventPromo({ config: { image, alt, banners } }: EventPromoProps) {
     return !notYetStarted && !alreadyEnded;
   });
 
+  // No active promo → render nothing, so the banner and image expire together.
+  if (!activeBanner) return null;
+
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
     <>
-      {activeBanner && (
-        <button type="button" className={styles.banner} onClick={open}>
-          {activeBanner.text}{" "}
-          <span className={styles.text2}>{activeBanner.text2}</span>
-        </button>
-      )}
+      <button type="button" className={styles.banner} onClick={open}>
+        {activeBanner.text}{" "}
+        <span className={styles.text2}>{activeBanner.text2}</span>
+      </button>
 
       <button
         type="button"
