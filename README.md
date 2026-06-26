@@ -1,8 +1,8 @@
 # The Orchard Bar
 
-Marketing website for **The Orchard Bar** — a casual restaurant and bar in Canonmills, Edinburgh, a few minutes' walk from the Botanic Gardens.
+Marketing website for **The Orchard Bar**; a casual restaurant and bar in Canonmills, Edinburgh, a few minutes' walk from the Botanic Gardens.
 
-It's a single-page React site driven entirely by typed content data: the menus, venue details, opening hours, promotions and section copy all live in `src/data/*.ts`, so updating the site means editing data, not hunting through JSX. Every component is styled with hand-written CSS Modules on top of a shared design-token system — no CSS framework, no UI library.
+It's a single-page React site driven entirely by typed content data: the menus, venue details, opening hours, promotions and section copy all live in `src/data/*.ts`, so updating the site means editing data, not hunting through JSX. Every component is styled with hand-written CSS Modules on top of a shared design-token system, no CSS framework, no UI library.
 
 🌐 Live: _add production URL_
 
@@ -21,7 +21,7 @@ It's a single-page React site driven entirely by typed content data: the menus, 
 | Icons | hand-built SVGs |
 | Hosting | Static `/dist` build (Netlify-style `_headers` included) |
 
-No CSS framework and no component library — every layout, icon and animation is bespoke.
+No CSS framework and no component library, every layout, icon and animation is bespoke.
 
 ## Features
 
@@ -41,10 +41,10 @@ The homepage is a single scrollable page with anchored sections reached from the
 
 | Anchor | Section |
 | --- | --- |
-| (top) | Hero — welcome, intro, CTAs, rotating policy line, event promo |
-| `#menu` | Menu — food/drinks tabs, sub-menus, dietary legend, featured dishes |
-| `#booking` | Booking — TableSense reservation widget + contact/address |
-| `#art` | Exhibitions — rolling local-artist exhibitions in the side room |
+| (top) | Hero, welcome, intro, CTAs, rotating policy line, event promo |
+| `#menu` | Menu, food/drinks tabs, sub-menus, dietary legend, featured dishes |
+| `#booking` | Booking, TableSense reservation widget + contact/address |
+| `#art` | Exhibitions, rolling local-artist exhibitions in the side room |
 | `#contact` | Contact details (within the footer/booking area) |
 
 React Router is wired in (`BrowserRouter`) for future standalone pages such as `/terms`, which is already referenced in the nav/footer data.
@@ -53,7 +53,7 @@ React Router is wired in (`BrowserRouter`) for future standalone pages such as `
 
 A conventional Vite + React + TypeScript SPA, with two ideas doing most of the work:
 
-1. **A typed content layer.** Everything a non-developer would want to change lives in `src/data/`. The menu in particular is a small schema (`MenuType` → `SubMenu` → `MenuCategory` → `MenuItem`) so the same data simultaneously powers the tab switcher, the per-sub-menu content, the dietary icons and the featured-card grid — they can't drift because they read from one source.
+1. **A typed content layer.** Everything a non-developer would want to change lives in `src/data/`. The menu in particular is a small schema (`MenuType` → `SubMenu` → `MenuCategory` → `MenuItem`), so the same data simultaneously powers the tab switcher, the per-sub-menu content, the dietary icons and the featured-card grid; they can't drift because they read from one source.
 2. **CSS Modules over design tokens.** Each component owns a scoped `*.module.css`; shared values (palette, type scale, spacing, z-index layers) come from custom properties in `index.css`. Responsiveness is achieved by scaling the type tokens at each breakpoint, so headings across every section resize from one place.
 
 ```
@@ -98,7 +98,7 @@ To update a menu, follow `src/data/MENU_UPDATE_INSTRUCTIONS.md` and edit the rel
 
 ## What I learned
 
-- **Modelling content as types pays off.** Designing the menu as a small typed schema meant tabs, sub-menus, dietary icons and featured cards all fall out of one data file — publishing a change is editing data, and nothing can fall out of sync.
+- **Modelling content as types pays off.** Designing the menu as a small typed schema meant tabs, sub-menus, dietary icons and featured cards all fall out of one data file, publishing a change is editing data, and nothing can fall out of sync.
 - **Stacking contexts are the whole game for overlays.** Getting the promo image to sit on top of *everything* (including a `z-index`-ed nav) came down to where each fixed element's stacking context is created, not just a bigger number.
 - **Protecting a real business's inbox.** Storing the contact email as obfuscated tokens / an image keeps it out of the static markup, which meaningfully cuts the scraping that plain `mailto:` addresses attract.
 - **One token scale beats per-component media queries.** Driving responsive type from custom properties scaled at each breakpoint kept the CSS small and consistent across sections.
@@ -106,9 +106,9 @@ To update a menu, follow `src/data/MENU_UPDATE_INSTRUCTIONS.md` and edit the rel
 ## What could be improved
 
 - **SEO/meta.** `index.html` still ships the placeholder `<title>` and default favicon; the site needs real titles, description, Open Graph tags and `Restaurant`/`LocalBusiness` structured data.
-- **Routing.** The `/terms` link exists in the data but isn't yet rendered by a `<Routes>` definition — it currently resolves to the single page.
+- **Routing.** The `/terms` link exists in the data but isn't yet rendered by a `<Routes>` definition; it currently resolves to the single page.
 - **Deployment.** The build must publish the compiled `/dist` output (not source); the `public/_headers` workaround for serving `.tsx` is a stop-gap that the proper static deploy removes the need for. A Vite `base` is also required if hosted under a project sub-path.
-- **Test coverage.** Only a couple of component tests exist (and `Button.test.tsx` is an empty placeholder) — worth a smoke test per section.
+- **Test coverage.** Only a couple of component tests exist (and `Button.test.tsx` is an empty placeholder), worth a smoke test per section.
 
 ## Future releases
 
@@ -119,7 +119,13 @@ To update a menu, follow `src/data/MENU_UPDATE_INSTRUCTIONS.md` and edit the rel
 
 ## Credits
 
-Built by **Victor Blanco** — Edinburgh-based frontend developer & designer.
+Built by **Victor Blanco**, Edinburgh-based frontend developer & designer.
 🌐 [victorblancoweb.com](https://victorblancoweb.com)
 
 **The Orchard Bar** — 1–2 Howard Place, Canonmills, Edinburgh EH3 5JZ · 0131 550 0850
+
+
+
+https://github.com/user-attachments/assets/83ac295b-51ef-4270-a57b-1b74af024d64
+
+
