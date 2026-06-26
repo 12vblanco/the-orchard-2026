@@ -33,3 +33,8 @@
   font-size: var(--text-sm);
   margin: 0;
 }
+@media (max-width: 894px) {
+  .cardItem {
+    padding: 0.4rem;
+  }
+}

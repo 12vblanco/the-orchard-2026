@@ -143,7 +143,7 @@ p {
     /* padding: 3rem 2rem; */
   }
   .menuFrame {
-    /* padding: 2.5rem 2rem; */
+    padding: 1.8rem;
   }
 }
 
@@ -182,7 +182,7 @@ p {
 }
 
 /* Remove featured cards + decorative corners on mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .menuColumn2 {
     display: none;
   }
