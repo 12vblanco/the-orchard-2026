@@ -132,10 +132,13 @@
   }
 
   .heroPolicy {
+    text-align: center;
     bottom: 1rem;
-    left: 1rem;
-    right: 25%;
+    line-height: 1.4;
+    max-width: 300px;
     font-size: var(--text-ssm);
+    margin: 0 auto;
+    /* left: 1rem; */
   }
 }
 @media (max-width: 400px) {
