@@ -138,6 +138,7 @@
     max-width: 300px;
     font-size: var(--text-ssm);
     margin: 0 auto;
+    padding-bottom: 1rem;
     /* left: 1rem; */
   }
 }
