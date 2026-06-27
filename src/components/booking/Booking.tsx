@@ -70,11 +70,17 @@ function Booking() {
             </div>
           )}
           <iframe
-            title={bookingEmbed.title}
-            className={styles.iframe}
+            title="Book a table"
             src={bookingEmbed.src}
-            allowTransparency
             onLoad={handleIframeLoad}
+            style={{
+              border: "none",
+              width: 280,
+              height: 362,
+              colorScheme: "light",
+              opacity: isIframeLoading ? 0 : 1,
+              transition: "opacity 0.3s ease",
+            }}
           />
         </div>
       </div>
