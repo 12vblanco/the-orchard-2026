@@ -97,6 +97,8 @@
   width: 280px;
   height: 362px;
   flex: 0 0 auto;
+  margin-top: 4.5rem;
+  margin-right: 5rem;
 }
 
 .iframe {
