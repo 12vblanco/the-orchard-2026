@@ -4,22 +4,22 @@ Marketing website for **The Orchard Bar**; a casual restaurant and bar in Canonm
 
 It's a single-page React site driven entirely by typed content data: the menus, venue details, opening hours, promotions and section copy all live in `src/data/*.ts`, so updating the site means editing data, not hunting through JSX. Every component is styled with hand-written CSS Modules on top of a shared design-token system, no CSS framework, no UI library.
 
-🌐 Live: _add production URL_
+🌐 Live: [https://theorchardbar.co.uk/](https://theorchardbar.co.uk/)
 
 ## Tech stack
 
-| Layer | Technology |
-| --- | --- |
-| Framework | React 19 |
-| Language | TypeScript 6 |
-| Routing | React Router 7 |
-| Build tool | Vite 8 |
-| Styling | CSS Modules + CSS custom-property design tokens |
-| Testing | Vitest 4 + Testing Library (jsdom) |
-| Linting | ESLint 10 (typescript-eslint, react-hooks, react-refresh) |
-| Booking | TableSense embed (iframe) |
-| Icons | hand-built SVGs |
-| Hosting | Static `/dist` build (Netlify-style `_headers` included) |
+| Layer      | Technology                                                |
+| ---------- | --------------------------------------------------------- |
+| Framework  | React 19                                                  |
+| Language   | TypeScript 6                                              |
+| Routing    | React Router 7                                            |
+| Build tool | Vite 8                                                    |
+| Styling    | CSS Modules + CSS custom-property design tokens           |
+| Testing    | Vitest 4 + Testing Library (jsdom)                        |
+| Linting    | ESLint 10 (typescript-eslint, react-hooks, react-refresh) |
+| Booking    | TableSense embed (iframe)                                 |
+| Icons      | hand-built SVGs                                           |
+| Hosting    | Static `/dist` build (Netlify-style `_headers` included)  |
 
 No CSS framework and no component library, every layout, icon and animation is bespoke.
 
@@ -39,13 +39,13 @@ No CSS framework and no component library, every layout, icon and animation is b
 
 The homepage is a single scrollable page with anchored sections reached from the nav:
 
-| Anchor | Section |
-| --- | --- |
-| (top) | Hero, welcome, intro, CTAs, rotating policy line, event promo |
-| `#menu` | Menu, food/drinks tabs, sub-menus, dietary legend, featured dishes |
-| `#booking` | Booking, TableSense reservation widget + contact/address |
-| `#art` | Exhibitions, rolling local-artist exhibitions in the side room |
-| `#contact` | Contact details (within the footer/booking area) |
+| Anchor     | Section                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| (top)      | Hero, welcome, intro, CTAs, rotating policy line, event promo      |
+| `#menu`    | Menu, food/drinks tabs, sub-menus, dietary legend, featured dishes |
+| `#booking` | Booking, TableSense reservation widget + contact/address           |
+| `#art`     | Exhibitions, rolling local-artist exhibitions in the side room     |
+| `#contact` | Contact details (within the footer/booking area)                   |
 
 React Router is wired in (`BrowserRouter`) for future standalone pages such as `/terms`, which is already referenced in the nav/footer data.
 
@@ -86,20 +86,20 @@ npm install
 npm run dev          # http://localhost:5173
 ```
 
-| Script | What it does |
-| --- | --- |
-| `npm run dev` | Vite dev server |
-| `npm run build` | Type-check (`tsc -b`) then build static assets to `/dist` |
-| `npm run preview` | Serve the production build locally |
-| `npm run lint` | ESLint |
-| `npm run test` | Vitest (watch mode) |
+| Script            | What it does                                              |
+| ----------------- | --------------------------------------------------------- |
+| `npm run dev`     | Vite dev server                                           |
+| `npm run build`   | Type-check (`tsc -b`) then build static assets to `/dist` |
+| `npm run preview` | Serve the production build locally                        |
+| `npm run lint`    | ESLint                                                    |
+| `npm run test`    | Vitest (watch mode)                                       |
 
 To update a menu, follow `src/data/MENU_UPDATE_INSTRUCTIONS.md` and edit the relevant sub-menu in `src/data/menu.ts`.
 
 ## What I learned
 
 - **Modelling content as types pays off.** Designing the menu as a small typed schema meant tabs, sub-menus, dietary icons and featured cards all fall out of one data file, publishing a change is editing data, and nothing can fall out of sync.
-- **Stacking contexts are the whole game for overlays.** Getting the promo image to sit on top of *everything* (including a `z-index`-ed nav) came down to where each fixed element's stacking context is created, not just a bigger number.
+- **Stacking contexts are the whole game for overlays.** Getting the promo image to sit on top of _everything_ (including a `z-index`-ed nav) came down to where each fixed element's stacking context is created, not just a bigger number.
 - **Protecting a real business's inbox.** Storing the contact email as obfuscated tokens / an image keeps it out of the static markup, which meaningfully cuts the scraping that plain `mailto:` addresses attract.
 - **One token scale beats per-component media queries.** Driving responsive type from custom properties scaled at each breakpoint kept the CSS small and consistent across sections.
 
@@ -124,8 +124,4 @@ Built by **Victor Blanco**, Edinburgh-based frontend developer & designer.
 
 **The Orchard Bar** — 1–2 Howard Place, Canonmills, Edinburgh EH3 5JZ · 0131 550 0850
 
-
-
 https://github.com/user-attachments/assets/83ac295b-51ef-4270-a57b-1b74af024d64
-
-
